@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
-import { Form, Input, Button } from 'antd';
-import { InfoCircleOutlined } from '@ant-design/icons';
+import React, { useState } from 'react'
+import { Form, Input, Button } from 'antd'
+import { InfoCircleOutlined } from '@ant-design/icons'
 
 const NewsInput = () => {
-  const [form] = Form.useForm();
-  const [requiredMark, setRequiredMarkType] = useState('optional');
+  const [form] = Form.useForm()
+  const [requiredMark,
+    setRequiredMarkType] = useState('optional')
 
   const onRequiredTypeChange = ({ requiredMarkValue }) => {
-    setRequiredMarkType(requiredMarkValue);
-  };
+    setRequiredMarkType(requiredMarkValue)
+  }
 
   return (
     <Form
       form={form}
       layout="vertical"
       initialValues={{
-        requiredMarkValue: requiredMark,
+        requiredMarkValue: requiredMark
       }}
       onValuesChange={onRequiredTypeChange}
-      requiredMark={requiredMark}
-    >
-      <Form.Item label="Required Mark" name="requiredMarkValue">
-      </Form.Item>
+      requiredMark={requiredMark}>
+      <Form.Item label="Required Mark" name="requiredMarkValue"></Form.Item>
       <Form.Item label="Title" required tooltip="This is a required field">
         <Input placeholder="Enter title" />
       </Form.Item>
@@ -29,17 +28,15 @@ const NewsInput = () => {
         label="Text"
         tooltip={{
           title: 'Enter text',
-          icon: <InfoCircleOutlined />,
-        }}
-      >
+          icon: <InfoCircleOutlined />
+        }}>
         <Input placeholder="Enter text" />
       </Form.Item>
       <Form.Item>
         <Button type="primary">Submit</Button>
       </Form.Item>
     </Form>
-  );
-};
+  )
+}
 
-export default () => <NewsInput />;
-
+export default () => <NewsInput />
