@@ -1,5 +1,5 @@
-import React from 'react'
-import { List, Avatar } from 'antd'
+import React from 'react';
+import { List, Avatar } from 'antd';
 
 const NewsList = ({ data }) => {
   return (

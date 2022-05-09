@@ -1,10 +1,9 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from '@apollo/react-hooks'
-import 'antd/dist/antd.css'
-import './App.css'
-
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+import 'antd/dist/antd.css';
+import styles from  './App.module.css';
 import Wrapper from './components/Wrapper/Index'
 
 const client = new ApolloClient({
@@ -17,7 +16,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <BrowserRouter>
         <ApolloProvider client={client}>
           <Wrapper />

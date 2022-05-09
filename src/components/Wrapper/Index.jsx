@@ -1,13 +1,13 @@
-import React from 'react'
-import gql from 'graphql-tag'
-import { useQuery } from '@apollo/react-hooks'
+import React from 'react';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 import styles from './index.module.scss'
 // components
-import Loader from '../Loader/Index'
-import Error from '../Error/Index'
-import Authoriztion from '../Auth/Index'
-import NewsList from '../NewsList/Index'
-import NewsInput from '../NewsInput/Index'
+import Loader from '../Loader/Index';
+import Error from '../Error/Index';
+import Authoriztion from '../Auth/Index';
+import NewsList from '../NewsList/Index';
+import NewsInput from '../NewsInput/Index';
 
 const GET_PATH = gql`
   query MyQuery {

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Spin } from 'antd'
-import styles from './index.module.scss'
+import React from 'react';
+import { Spin } from 'antd';
+import styles from './index.module.scss';
 
 function Loader() {
 	return (
